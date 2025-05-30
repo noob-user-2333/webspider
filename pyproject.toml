@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "webspider"
+version = "0.1.0"
+description = ""
+authors = ["zzh <2360860468@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+peewee = "^3.18.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
