@@ -1,6 +1,9 @@
 import atexit
+import os
 from peewee import *
 DB_PATH = "/dev/shm/webspider.db"
+if os.name == 'nt':
+    DB_PATH = "Z:\\webspider.db"
 db = SqliteDatabase(DB_PATH)
 db.connect()
 # 定义一个全局代理
