@@ -8,6 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 peewee = "^3.18.1"
+selenium = "^4.33.0"
+beautifulsoup4 = "^4.13.4"
+browser-cookie3 = "^0.20.1"
 
 
 [build-system]

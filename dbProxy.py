@@ -4,12 +4,13 @@ from peewee import *
 DB_PATH = "/dev/shm/webspider.db"
 if os.name == 'nt':
     DB_PATH = "Z:\\webspider.db"
+print(f"当前平台为:{os.name}")
+print(f"数据库(SQLite)路径为:{DB_PATH}")
 db = SqliteDatabase(DB_PATH)
 db.connect()
 # 定义一个全局代理
 db_proxy = DatabaseProxy()
 db_proxy.initialize(db)
-print(f'当前使用数据库为SQLite，地址为:{DB_PATH}')
 # 所有 Model 继承自 BaseModel，使用 db_proxy
 class BaseModel(Model):
     class Meta:
